@@ -1,0 +1,181 @@
+/*
+$content-text-base: #1E252B;
+$content-text-link: #5AB3E4;
+$content-table-border: #5AB3E4;
+$content-table-th-ground: #E6F6FF;
+$content-table-th-text: #6D7381;
+
+$font-family-regular: 'LatoWeb', sans-serif;
+$font-family-medium: 'LatoWebMedium', sans-serif;
+$font-family-bold: 'LatoWebBold', sans-serif;
+*/
+
+h2 {
+  font-family: 'LatoWebBold', sans-serif;
+  color: #1E252B;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 100%;
+  margin: 0 0 20px 0 !important;
+}
+
+h3 {
+  font-family: 'LatoWebMedium', sans-serif;
+  color: #1E252B;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  margin: 0 0 20px 0 !important;
+}
+
+h4 {
+  font-family: 'LatoWeb', sans-serif;
+  color: #1E252B;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  margin: 0 0 20px 0 !important;
+}
+
+p {
+  color: #1E252B;
+  margin: 0;
+}
+
+a {
+  color: #5AB3E4;
+  text-decoration: none;
+}
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+
+ul {
+  list-style-image: url('/assets/icons/list_style_image.svg');
+  margin: 20px 0;
+  padding: 0 0 0 20px;
+}
+  ul li {
+    padding-left: 10px;
+  }
+
+
+ol {
+  margin: 20px 0;
+  padding: 0 0 0 20px;
+}
+
+  ol li {
+    padding-left: 10px;
+  }
+
+li {
+  color: #1E252B;
+  line-height: 130%;
+  margin-bottom: 3px;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  color: #1E252B;
+  text-align: center;
+}
+
+table {
+  border: 1px solid #5AB3E4;
+  border-collapse: collapse;
+  margin: -1px;
+  table-layout: fixed;
+  width: calc(100% + 2px);
+}
+
+th {
+  font-family: 'LatoWebMedium', sans-serif;
+  background: #E6F6FF;
+  border: 1px solid #5AB3E4;
+  color: #1E252B;
+  font-weight: 700;
+  line-height: 160%;
+  padding: 5px;
+}
+
+td {
+  border: 1px solid #5AB3E4;
+  color: #6D7381;
+  line-height: 160%;
+  padding: 5px;
+  text-align: center;
+}
+
+img {
+  border-radius: 10px;
+  max-width: 768px;
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+  margin: 0 auto;
+}
+
+.image {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+  .image figcaption {
+    padding-top: 10px !important;
+    font-size: 14px !important;
+    line-height: 130%;
+    color: #A4B0C3 !important;
+    margin-bottom: 30px; /* проверить по макету !!! */
+  }
+
+  .image.image-style-align-left {
+    float: left;
+    margin: 0 30px 0 0; /* проверить по макету !!! */
+    width: 50%;
+    height: 50%;
+  }
+
+    .image.image-style-align-left > img {
+      width: 100%;
+    }
+
+  .image.image-style-align-right {
+    float: right;
+    margin: 0 0 0 30px; /* проверить по макету !!! */
+    width: 50%;
+    height: 50%;
+  }
+
+    .image.image-style-align-right > img {
+      width: 100%;
+    }
+
+
+.table {
+  border: 1px solid #5AB3E4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.marker-yellow {
+  background-color: #E1D05F;
+  color: inherit;
+}
+
+.marker-pink {
+  background-color: #E86F79;
+  color: inherit;
+}
+
+.marker-green {
+  background-color: rgba(111, 207, 151, 0.3);
+  color: inherit;
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Angular 8 + TinyMCE 5 with lazy Loading</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <style>
+/*
+Тут пути к файлам АБСОЛЮТНЫЕ, при этот выглядят как ошибки, потому что подсвечены красным
+и не работает Ctrl+Click
+
+Это сделано согласно решению @see https://github.com/angular/angular-cli/issues/6599#issuecomment-540034525
+чтобы 1) статика не копировались повторно в / (root) директорию в режиме ng build --prod
+      2) чтобы для режима SSR для статики не было 404 File Not Found
+*/
+
+    /* Webfont: Lato-Bold */
+    @font-face {
+      font-family: 'LatoWebBold';
+      src: url('/assets/fonts/Lato-Bold.eot'); /* IE9 Compat Modes */
+      src: url('/assets/fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url('/assets/fonts/Lato-Bold.woff2') format('woff2'), /* Modern Browsers */
+           url('/assets/fonts/Lato-Bold.woff') format('woff'), /* Modern Browsers */
+           url('/assets/fonts/Lato-Bold.ttf') format('truetype');
+      font-style: normal;
+      font-weight: normal;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Webfont: Lato-Medium */
+    @font-face {
+      font-family: 'LatoWebMedium';
+      src: url('/assets/fonts/Lato-Medium.eot'); /* IE9 Compat Modes */
+      src: url('/assets/fonts/Lato-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url('/assets/fonts/Lato-Medium.woff2') format('woff2'), /* Modern Browsers */
+           url('/assets/fonts/Lato-Medium.woff') format('woff'), /* Modern Browsers */
+           url('/assets/fonts/Lato-Medium.ttf') format('truetype');
+      font-style: normal;
+      font-weight: normal;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Webfont: Lato-Regular */
+    @font-face {
+      font-family: 'LatoWeb';
+      src: url('/assets/fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
+      src: url('/assets/fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url('/assets/fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+           url('/assets/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+           url('/assets/fonts/Lato-Regular.ttf') format('truetype');
+      font-style: normal;
+      font-weight: normal;
+      text-rendering: optimizeLegibility;
+    }
+  </style>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

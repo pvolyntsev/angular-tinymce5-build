@@ -1,0 +1,14 @@
+.normal {
+  font-family: $font-family-regular;
+  font-weight: 400;
+}
+
+.bolder, .medium {
+  font-family: $font-family-medium;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b, .bold, .strong {
+  font-family: $font-family-bold;
+  font-weight: 700;
+}

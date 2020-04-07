@@ -1,0 +1,16 @@
+@import "scss/main";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-regular;
+  color: $font-color;
+  font-size: $font-size;
+  font-weight: normal;
+  line-height: $line-height;
+  background: $body-background-color;
+}
+
+a:focus {
+  outline: none;
+}

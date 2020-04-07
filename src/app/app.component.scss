@@ -1,0 +1,15 @@
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-left: 1px dashed #999;
+  border-right: 1px dashed #999;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 360px;
+  }
+}

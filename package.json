@@ -1,0 +1,39 @@
+{
+  "name": "angular-tinymce5-build",
+  "version": "0.0.1",
+  "repository": "https://github.com/pvolyntsev/angular-tinymce5-build",
+  "scripts": {
+    "start": "ng build --watch",
+    "serve": "ng serve",
+    "build": "ng build"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@angular-devkit/build-angular": "~0.803.23",
+    "@angular-devkit/build-ng-packagr": "^0.803.23",
+    "@angular/animations": "^8.2.14",
+    "@angular/cdk": "^8.2.3",
+    "@angular/cli": "~8.3.23",
+    "@angular/common": "^8.2.14",
+    "@angular/compiler": "^8.2.14",
+    "@angular/compiler-cli": "^8.2.14",
+    "@angular/core": "^8.2.14",
+    "@angular/forms": "^8.2.14",
+    "@angular/language-service": "^8.2.14",
+    "@angular/platform-browser": "^8.2.14",
+    "@angular/platform-browser-dynamic": "^8.2.14",
+    "@angular/router": "^8.2.14",
+    "@tinymce/tinymce-angular": "^3.5.0",
+    "@types/node": "~8.9.4",
+    "tinymce": "file:../tinymce-custom",
+    "ts-node": "3.3.0",
+    "tsickle": "^0.36.0",
+    "tslib": "^1.11.1",
+    "tslint": "5.7.0",
+    "typescript": "~3.5.3",
+    "zone.js": "^0.10.2"
+  },
+  "_dependencies": {
+    "tinymce": "^5.2.1"
+  }
+}

@@ -1,0 +1,62 @@
+/* Webfont: Lato-Bold */
+@font-face {
+    font-family: 'LatoWebBold';
+    src: url('/assets/fonts/Lato-Bold.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/fonts/Lato-Bold.woff2') format('woff2'), /* Modern Browsers */
+    url('/assets/fonts/Lato-Bold.woff') format('woff'), /* Modern Browsers */
+    url('/assets/fonts/Lato-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Medium */
+@font-face {
+    font-family: 'LatoWebMedium';
+    src: url('/assets/fonts/Lato-Medium.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/Lato-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/fonts/Lato-Medium.woff2') format('woff2'), /* Modern Browsers */
+    url('/assets/fonts/Lato-Medium.woff') format('woff'), /* Modern Browsers */
+    url('/assets/fonts/Lato-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Regular */
+@font-face {
+    font-family: 'LatoWeb';
+    src: url('/assets/fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+    url('/assets/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+    url('/assets/fonts/Lato-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/*.normal {*/
+/*    font-family: 'LatoWeb', sans-serif;*/
+/*    font-weight: 400;*/
+/*}*/
+
+/*.bolder, .medium {*/
+/*    font-family: 'LatoWebMedium', sans-serif;*/
+/*    font-weight: 500;*/
+/*}*/
+
+/*h1, h2, h3, h4, h5, h6, strong, b, .bold, .strong {*/
+/*    font-family: 'LatoWebBold', sans-serif;*/
+/*    font-weight: 700;*/
+/*}*/
+
+body {
+    font-family: 'LatoWeb', sans-serif;
+    color: #1E252B;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 130%;
+    background: #FFFFFF;
+}
