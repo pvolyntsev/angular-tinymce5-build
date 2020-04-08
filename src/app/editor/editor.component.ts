@@ -10,19 +10,21 @@ export class EditorComponent implements OnInit {
   public form: FormGroup;
 
   public editorConfig: any = {
+	skin: "lingua",
     height: 500,
-    menubar: false,
+	menubar: false,
+	inline: true,
     plugins: [
       'advlist autolink lists link image charmap print preview anchor',
       'searchreplace visualblocks code fullscreen',
       'insertdatetime media table paste code help wordcount selectlist'
     ],
     toolbar:
-      'undo redo | formatselect | bold italic backcolor | \
-      alignleft aligncenter alignright alignjustify | \
-      bullist numlist outdent indent | removeformat | selectlist | help',
+      'undo redo | styleselect | hr | bold italic underline strikethrough | \
+		subscript superscript | table | backcolor forecolor | image | \
+		alignleft aligncenter alignright alignjustify | bullist numlist selectlist',
 
-    extended_valid_elements: "gap-selectbox[*],gap-variant[*]",
+	extended_valid_elements : "gap-selectbox[*],gap-variant[*],marker[*]",
 
     content_css: [
       '/assets/base.css', // базовые стили
