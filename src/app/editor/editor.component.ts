@@ -18,6 +18,9 @@ export class EditorComponent implements OnInit {
       'searchreplace visualblocks code fullscreen',
       'insertdatetime media table paste code help wordcount selectlist'
     ],
+	
+	contextmenu: 'link selectlist',
+	
     toolbar:
       'undo redo | styleselect | hr | bold italic underline strikethrough | \
 		table | backcolor forecolor | \
