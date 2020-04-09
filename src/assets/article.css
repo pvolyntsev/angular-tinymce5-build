@@ -10,6 +10,12 @@ $font-family-medium: 'LatoWebMedium', sans-serif;
 $font-family-bold: 'LatoWebBold', sans-serif;
 */
 
+body {
+  font-size: 18px;
+  line-height: 130%;
+  color: #1E252B;
+}
+
 h2 {
   font-family: 'LatoWebBold', sans-serif;
   color: #1E252B;
