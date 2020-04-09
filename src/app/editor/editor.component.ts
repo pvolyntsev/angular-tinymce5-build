@@ -11,18 +11,25 @@ export class EditorComponent implements OnInit {
 
   public editorConfig: any = {
 	skin: "lingua",
-    height: 500,
 	menubar: false,
 	inline: true,
     plugins: [
-      'advlist autolink lists link image charmap print preview anchor',
+      'autolink lists link image charmap print preview anchor',
       'searchreplace visualblocks code fullscreen',
       'insertdatetime media table paste code help wordcount selectlist'
     ],
     toolbar:
       'undo redo | styleselect | hr | bold italic underline strikethrough | \
-		subscript superscript | table | backcolor forecolor | image | \
-		alignleft aligncenter alignright alignjustify | bullist numlist selectlist',
+		table | backcolor forecolor | \
+		align | bullist numlist selectlist',
+		
+	toolbar_groups: {
+		align: {
+		  icon: 'align-justify',
+		  tooltip: 'Align',
+		  items: 'alignleft aligncenter alignright alignjustify'
+		}
+	},
 
 	extended_valid_elements : "gap-selectbox[*],gap-variant[*],marker[*]",
 
