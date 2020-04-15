@@ -89,12 +89,15 @@ figcaption { // @deprecated
 
 table {
   border: 1px solid $content-table-border;
-  border-collapse: collapse;
   margin: 20px -1px;
   table-layout: fixed;
   width: calc(100% + 2px);
   border-radius: 10px;
   overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   caption {
     padding-top: 20px !important;  // проверить по макету !!!
@@ -105,7 +108,7 @@ table {
   }
 }
 
-th {
+table th { // @deprecated - ckeditor
   font-family: $font-family-medium;
   background: $content-table-th-ground;
   border: 1px solid $content-table-border;
@@ -115,12 +118,36 @@ th {
   padding: 5px;
 }
 
-td {
+table td {
   border: 1px solid $content-table-border;
   color: $content-table-th-text;
   line-height: 160%;
-  padding: 5px;
   text-align: center;
+  padding: 10px;
+  border-left: 0;
+  border-top: 0;
+}
+table tr:first-child td {
+  font-family: $font-family-medium;
+  background:  $content-table-th-ground;
+  color: $content-text-base;
+  font-weight: 500;
+  border-top: none;
+}
+table tr:last-child td {
+  border-bottom: none;
+}
+table tr td:last-child {
+  border-right: none;
+}
+table td:first-child, table th:first-child {
+  border-left: none;
+}
+table tr:first-child td:first-child {
+  border-top-left-radius: 10px;
+}
+table tr:first-child td:last-child {
+  border-top-right-radius: 10px;
 }
 
 img {
