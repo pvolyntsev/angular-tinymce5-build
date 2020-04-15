@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {TinyMCEGapsConfig} from './tinymce.config';
 
 @Component({
   selector: 'app-editor',
@@ -9,39 +10,7 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 export class EditorComponent implements OnInit {
   public form: FormGroup;
 
-  public editorConfig: any = {
-	skin: "lingua",
-	menubar: false,
-	inline: true,
-    plugins: [
-      'autolink lists link image charmap print preview anchor',
-      'searchreplace visualblocks code fullscreen',
-      'insertdatetime media table paste code help wordcount selectlist'
-    ],
-	
-	contextmenu: 'link selectlist',
-	
-    toolbar:
-      'undo redo | styleselect | hr | bold italic underline strikethrough | \
-		table | backcolor forecolor | \
-		align | bullist numlist selectlist',
-		
-	toolbar_groups: {
-		align: {
-		  icon: 'align-justify',
-		  tooltip: 'Align',
-		  items: 'alignleft aligncenter alignright alignjustify'
-		}
-	},
-
-	extended_valid_elements : "gap-selectbox[*],gap-variant[*],marker[*]",
-
-    content_css: [
-      '/assets/base.css', // базовые стили
-      '/assets/article.css', // общее оформление текста
-      '/assets/plugins.css', // стили для плагинов
-    ],
-  };
+  public editorConfig = TinyMCEGapsConfig;
 
   constructor(
     protected fb: FormBuilder,
@@ -55,25 +24,7 @@ export class EditorComponent implements OnInit {
   protected createForm() {
     this.form = this.fb.group({
       text: [
-        `<h1>Заголовок 1</h1>
-	   <p><em>“Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается со слов «to be or not to be», что в переводе на русский язык означает «быть или не быть». Глагол «to be» - один из самых часто употребляемых глаголов в английском языке. Это глагол состояния, который не выражает никакой конкретной деятельности или действия, а вместо этого описывает существование. Также, он используется в качестве вспомогательного глагола, например, с настоящим длительным“</em></p>
-	   <table style="border-collapse: collapse; width: 100%;" border="1" data-mce-style="border-collapse: collapse; width: 100%;">
-		<tbody>
-			<tr>
-				<td style="width: 33.3333%;" data-mce-style="width: 33.3333%;">Заголовок</td>
-				<td style="width: 33.3333%;" data-mce-style="width: 33.3333%;">Заголовок</td>
-				<td style="width: 33.3333%;" data-mce-style="width: 33.3333%;">Заголовок</td>
-			</tr>
-		  	<tr>
-				<td style="width: 33.3333%;" data-mce-style="width: 33.3333%;">Ячейка</td>
-				<td style="width: 33.3333%;" data-mce-style="width: 33.3333%;">Ячейка</td>
-				<td style="width: 33.3333%;" data-mce-style="width: 33.3333%;">Ячейка</td>
-			</tr>
-	  	</tbody>
-	  </table>
-	  <p>Next, use our Get Started <gap-selectbox><gap-variant selected="selected">docs</gap-variant><gap-variant>1</gap-variant><gap-variant>2</gap-variant></gap-selectbox>
-		  to setup Tiny!
-	  </p>`
+        "<h1>Заголовок 1</h1>\n<h2>Заголовок 2</h2>\n<h3>Заголовок 3</h3>\n<p><em><img style=\"float: left;\" src=\"https://picsum.photos/200/300\" alt=\"\" width=\"200\" height=\"300\" />&ldquo;Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается со слов &laquo;to be or not to be&raquo;, что в переводе на русский язык означает &laquo;быть или не быть&raquo;. Глагол &laquo;to be&raquo; - один из самых часто употребляемых глаголов в английском языке. Это глагол состояния, который не выражает никакой конкретной деятельности или действия, а вместо этого описывает существование. Также, он используется в качестве вспомогательного глагола, например, с настоящим длительным&ldquo;</em></p>\n<p>&nbsp;</p>\n<p><em><img style=\"float: right;\" src=\"https://picsum.photos/200/300\" alt=\"\" width=\"200\" height=\"300\" />&ldquo;Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается со слов &laquo;to be or not to be&raquo;, что в переводе на русский язык означает &laquo;быть или не быть&raquo;. Глагол &laquo;to be&raquo; - один из самых часто употребляемых глаголов в английском языке. Это глагол состояния, который не выражает никакой конкретной деятельности или действия, а вместо этого описывает существование. Также, он используется в качестве вспомогательного глагола, например, с настоящим длительным&ldquo;</em></p>\n<p>&nbsp;</p>\n<p><em>&ldquo;Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается со слов &laquo;to be or not to be&raquo;, что в переводе на русский язык означает &laquo;быть или не быть&raquo;. Глагол &laquo;to be&raquo; - один из самых часто употребляемых глаголов в английском языке. Это глагол состояния, который не выражает никакой конкретной деятельности или действия, а вместо этого описывает существование. Также, он используется в качестве вспомогательного глагола, например, с настоящим длительным&ldquo;</em></p>\n<p>&nbsp;</p>\n<p><em><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://picsum.photos/200/300\" alt=\"\" width=\"200\" height=\"300\" /></em></p>\n<p>&nbsp;</p>\n<p><em>&ldquo;Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается со слов &laquo;to be or not to be&raquo;, что в переводе на русский язык означает &laquo;быть или не быть&raquo;. Глагол &laquo;to be&raquo; - один из самых часто употребляемых глаголов в английском языке. Это глагол состояния, который не выражает никакой конкретной деятельности или действия, а вместо этого описывает существование. Также, он используется в качестве вспомогательного глагола, например, с настоящим длительным&ldquo;</em></p>\n<hr />\n<ul>\n<li><em>Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается </em></li>\n<li><em>Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается </em></li>\n<li><em>Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается </em></li>\n<li><em>Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается</em></li>\n</ul>\n<hr />\n<ol>\n<li><em>Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается </em></li>\n<li><em>Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается </em></li>\n<li><em>Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается </em></li>\n<li><em>Знаменитый монолог Гамлета из одноименной пьесы Шекспира начинается</em></li>\n</ol>\n<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo>=</mo><mn>5</mn></mrow></math></p>\n<p>&nbsp;</p>\n<table style=\"border-collapse: collapse; width: 100%;\" border=\"1\">\n<tbody>\n<tr>\n<td style=\"width: 33.3333%;\">Заголовок</td>\n<td style=\"width: 33.3333%;\">Заголовок</td>\n<td style=\"width: 33.3333%;\">Заголовок</td>\n</tr>\n<tr>\n<td style=\"width: 33.3333%;\">Ячейка</td>\n<td style=\"width: 33.3333%;\">Ячейка</td>\n<td style=\"width: 33.3333%;\">Ячейка</td>\n</tr>\n</tbody>\n</table>\n<p>Next, use our Get Started <gap-selectbox><gap-variant selected=\"selected\">docs</gap-variant><gap-variant>1</gap-variant><gap-variant>2</gap-variant></gap-selectbox> to setup Tiny!</p>"
       ],
     });
   }

@@ -2,11 +2,13 @@
     <div class="header">
         <div class="title">Angular 8 + TinyMCE 5 with lazy Loading</div>
     </div>
-    <div class="body" [formGroup]="form">
-        <editor [init]="editorConfig" formControlName="text"></editor>
+    <div class="body">
+        <div class="form" [formGroup]="form">
+            <div class="text-content">
+                <editor class="rich-editor" [init]="editorConfig" formControlName="text"></editor>
+            </div>
+        </div>
 
-        <hr/>
-
-        <pre style="width: 100%; white-space: pre-line; height: 150px; font-size: 16px;">{{ form.value | json }}</pre>
+        <textarea readonly style="width: 100%; white-space: pre-line; height: 350px; font-size: 16px;">{{ form.value | json }}</textarea>
     </div>
 </div>

@@ -25,6 +25,7 @@
     "@angular/router": "^8.2.14",
     "@tinymce/tinymce-angular": "^3.5.0",
     "@types/node": "~8.9.4",
+    "@wiris/mathtype-tinymce5": "^7.17.0",
     "tinymce": "file:../tinymce-custom",
     "ts-node": "3.3.0",
     "tsickle": "^0.36.0",

@@ -3,6 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/editor',
+  },
+  {
     /** @see EditorModule */
     path: 'editor',
     loadChildren: './editor/editor.module#EditorModule',

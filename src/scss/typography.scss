@@ -12,3 +12,12 @@ h1, h2, h3, h4, h5, h6, strong, b, .bold, .strong {
   font-family: $font-family-bold;
   font-weight: 700;
 }
+
+.rich-html, .rich-editor {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+
+  @import "article";
+  @import "plugins";
+}

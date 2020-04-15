@@ -1,8 +1,11 @@
+$transition-time: 200ms;
+
 .panel {
   box-sizing: border-box;
   border: 1px solid #EEEEEE;
   border-radius: 10px;
   margin: 20px 0;
+  max-width: 830px;
 
   .header {
     display: flex;
@@ -22,5 +25,41 @@
     overflow: hidden;
     padding: 0 30px 30px 30px;
     height: 100%;
+  }
+
+  .form {
+    &::before, &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background: #eee;
+      margin-left: -10px;
+      margin-right: -10px;
+      transition: background $transition-time linear;
+    }
+
+    &.has-warning {
+      &::before, &::after {
+        background: orange;
+      }
+    }
+  }
+
+  .text-content {
+    min-height: 160px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
+.rich-editor {
+  position: relative;
+
+  ::ng-deep .mce-content-body {
+    min-height: 160px;
+  }
+
+  ::ng-deep .mce-edit-focus {
+    outline: 1px solid transparent;
   }
 }
