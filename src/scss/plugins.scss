@@ -23,3 +23,117 @@ gap-selectbox {
 }
 gap-selectbox gap-variant {display: none}
 gap-selectbox gap-variant[selected="selected"] {display: inline}
+
+
+table {
+    border-spacing: 0;
+    border: 1px solid #5AB3E4;
+    border-radius: 10px;
+    border-collapse: separate !important;
+    overflow: hidden;
+}
+table td {
+    padding: 10px;
+    border-left: 0;
+    border-top: 0;
+    color: #6D7381;
+}
+table tr:first-child td {
+    background: #E6F6FF;
+    color: #1E252B;
+    font-weight: bold;
+    border-top: none;
+}
+table tr:last-child td {
+    border-bottom: none;
+}
+table tr td:last-child {
+    border-right: none;
+}
+table td:first-child, table th:first-child {
+    border-left: none;
+}
+table tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+}
+table tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+}
+
+columns {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+column {
+    flex: 1
+}
+column + column {
+    margin-left: 20px;
+}
+
+figure.image {
+    border: 1px solid gray;
+    margin: 0 2px 0 1px;
+    background: #f5f2f0;
+    width: 50%;
+}
+
+figure.align-left {
+    float: left;
+    width: 50%;
+    margin: 0 10px 10px 0;
+}
+
+figure.align-center {
+    display: block;
+}
+
+figure.align-right {
+    float: right;
+    width: 50%;
+    margin: 0 0 10px 10px;
+}
+
+figure.image img {
+    width: 100%;
+}
+
+figure.image figcaption {
+    margin: 6px 8px 6px 8px;
+    text-align: center;
+}
+
+#aria-owns_2303449411561588783963756 .tox-swatches__row {
+    display: none;
+}
+
+blockquote[class^="blockquote-"] {
+    padding: 20px;
+    margin: 0 0 20px;
+    border-radius: 10px;
+}
+.blockquote-black {background-color: #000000;color: #fff;}
+.blockquote-gray {background-color: #6D7381;}
+.blockquote-blue {background-color: #5AB3E4;}
+.blockquote-red {background-color: #E86F79;}
+.blockquote-green {background-color: #87D37C;}
+.blockquote-yellow {background-color: #FFDD00;}
+
+marker[class^="marker-"] {
+    display: inline;
+}
+.marker-black {background-color: #000000; color: #fff;}
+.marker-gray {background-color: #6D7381;}
+.marker-blue {background-color: #5AB3E4;}
+.marker-red {background-color: #E86F79;}
+.marker-green {background-color: #87D37C;}
+.marker-yellow {background-color: #FFDD00;}
+
+span[class^="span-"] {}
+.span-black {color: #000000;}
+.span-gray {color: #6D7381;}
+.span-blue {color: #5AB3E4;}
+.span-red {color: #E86F79;}
+.span-green {color: #87D37C;}
+.span-yellow {color: #FFDD00;}

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import {TinyMCEGapsConfig} from './tinymce.config';
+import {TinyMCEConfig, TinyMCEGapsConfig} from './tinymce.config';
 
 @Component({
   selector: 'app-editor',
@@ -10,7 +10,7 @@ import {TinyMCEGapsConfig} from './tinymce.config';
 export class EditorComponent implements OnInit {
   public form: FormGroup;
 
-  public editorConfig = TinyMCEGapsConfig;
+  public editorConfig = TinyMCEConfig;
 
   constructor(
     protected fb: FormBuilder,

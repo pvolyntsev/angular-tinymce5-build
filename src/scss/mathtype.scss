@@ -1,0 +1,47 @@
+.onclass-app {
+    .wrs_editor .wrs_toolbar .wrs_header > div.wrs_selected, .wrs_editor .wrs_toolbar .wrs_header > button.wrs_selected {
+        background: #fff;
+        border: 1px solid #EEEEEE;
+    }
+    .wrs_editor .wrs_toolbar .wrs_header > button, .wrs_editor .wrs_toolbar .wrs_header > div {
+        background: #3491c3;
+        border: 1px solid #EEEEEE;
+    }
+    .wrs_editor .wrs_toolbar .wrs_header > button:hover, .wrs_editor .wrs_toolbar .wrs_header > div:hover {
+        background: #5ab3e4;
+    }
+    .wrs_editor .wrs_panelContainer {
+        background: #fff;
+    }
+    .wrs_editor .wrs_panelContainer {
+        border: 1px solid #EEEEEE;
+    }
+    .wrs_editor.wrs_withHand:not(.wrs_handDisabled):not(.wrs_toolbarHidden) .wrs_handWrapper > input {
+        background-color: #3491c3;
+    }
+    .wrs_modal_button_accept, .wrs_modal_button_accept:hover, .wrs_modal_button_accept:visited, .wrs_modal_button_accept:active, .wrs_modal_button_accept:focus {
+
+    }
+    .wrs_editor table {
+        border-radius: 0;
+    }
+    .wrs_editor table tr:first-child td {
+        background: #fff;
+    }
+    .wrs_modal_button_accept, .wrs_modal_button_accept:hover, .wrs_modal_button_accept:visited, .wrs_modal_button_accept:active, .wrs_modal_button_accept:focus {
+        border: 1px solid #3491c3;
+        background: #3491c3;
+        border-radius: 10px;
+    }
+    .wrs_modal_button_cancel, .wrs_modal_button_cancel:hover, .wrs_modal_button_cancel:visited, .wrs_modal_button_cancel:active, .wrs_modal_button_cancel:focus {
+        border-radius: 10px;
+    }
+    .wrs_modal_title_bar {
+        display: block;
+        background-color: #3491c3;
+    }
+    .wrs_modal_dialogContainer.wrs_modal_desktop.wrs_stack {
+        border-radius: 9px;
+        overflow: hidden;
+    }
+}
