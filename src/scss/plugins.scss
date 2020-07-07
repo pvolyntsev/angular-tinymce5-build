@@ -114,35 +114,69 @@ column + column {
 
 /** image plugin */
 figure.image {
-    border: 1px solid gray;
-    margin: 0 2px 0 1px;
-    background: #f5f2f0;
-    width: 50%;
+    figcaption {
+        padding-top: 10px !important;
+        font-size: 14px !important;
+        line-height: 130%;
+        color: #A4B0C3 !important;
+        //margin-bottom: 30px; // проверить по макету !!!
+        text-align: center;
+    }
 }
 
 figure.align-left {
     float: left;
-    width: 50%;
-    margin: 0 10px 10px 0;
+    width: 50% !important;
+    height: 100% !important;
+    margin: 10px 30px 10px 0;
+
+    > img {
+        width: 100%;
+        height: auto !important;
+    }
 }
 
 figure.align-center {
     display: block;
+    width: 100%;
+    margin: 10px 0;
+
+    > img {
+        width: 100%;
+        height: auto !important;
+    }
 }
 
 figure.align-right {
     float: right;
+    width: 50% !important;
+    height: 100% !important;
+    margin: 10px 0 10px 30px;
+    
+    > img {
+        width: 100%;
+        height: auto !important;
+    }
+}
+
+img.align-left {
+    float: left;
+    width: 50% !important;
+    margin: 10px 30px 10px 0;
+    height: 100% !important
+}
+
+img.align-right {
+    float: right;
     width: 50%;
-    margin: 0 0 10px 10px;
+    margin: 10px 0 10px 30px;
 }
 
-figure.image img {
+img.align-center {
     width: 100%;
-}
-
-figure.image figcaption {
-    margin: 6px 8px 6px 8px;
-    text-align: center;
+    max-width: 100%;
+    height: auto !important;
+    margin: 10px 0;
 }
 
 /** ??? */
@@ -172,7 +206,7 @@ marker[class^="marker-"] { display: inline; }
 .marker-green      { background-color: #97E28D; }
 .marker-yellow     { background-color: #F3E47F; }
 
-/** span-colors plugin */
+/** span-colors plugin @deprecated */
 span[class^="span-"] { display: inline; }
 .span-black        { color: #1E252B; }
 .span-gray         { color: #6D7381; }
@@ -181,3 +215,14 @@ span[class^="span-"] { display: inline; }
 .span-red          { color: #E86F79; }
 .span-green        { color: #87D37C; }
 .span-yellow       { color: #FFDD00; }
+
+
+/** pen-colors plugin */
+span[class^="pen-"] { display: inline; }
+.pen-black         { color: #1E252B; }
+.pen-gray          { color: #6D7381; }
+.pen-white         { color: #FFFFFF; }
+.pen-blue          { color: #5AB3E4; }
+.pen-red           { color: #E86F79; }
+.pen-green         { color: #87D37C; }
+.pen-yellow        { color: #FFDD00; }

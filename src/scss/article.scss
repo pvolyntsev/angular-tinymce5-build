@@ -78,15 +78,6 @@ li {
   margin-bottom: 3px;
 }
 
-figure { // @deprecated
-  margin: 0;
-}
-
-figcaption { // @deprecated
-  color: #1E252B;
-  text-align: center;
-}
-
 table {
   border: 1px solid $content-table-border;
   margin: 20px -1px;
@@ -164,49 +155,4 @@ img {
   border-radius: 10px;
   overflow: hidden;
   margin: 0 auto;
-
-  figcaption {
-    padding-top: 10px !important;
-    font-size: 14px !important;
-    line-height: 130%;
-    color: #A4B0C3 !important;
-    margin-bottom: 30px; // проверить по макету !!!
-    text-align: center;
-  }
-
-  &.image-style-align-left {
-    float: left;
-    margin: 0 30px 0 0; // проверить по макету !!!
-    width: 50%;
-    height: 50%;
-
-    > img {
-      width: 100%;
-    }
-  }
-
-  &.image-style-align-right {
-    float: right;
-    margin: 0 0 0 30px; // проверить по макету !!!
-    width: 50%;
-    height: 50%;
-    > img {
-      width: 100%;
-    }
-  }
-}
-
-.marker-yellow { // @deprecated
-  background-color: #E1D05F;
-  color: inherit;
-}
-
-.marker-pink { // @deprecated
-  background-color: #E86F79;
-  color: inherit;
-}
-
-.marker-green { // @deprecated
-  background-color: rgba(111, 207, 151, 0.3);
-  color: inherit;
 }
