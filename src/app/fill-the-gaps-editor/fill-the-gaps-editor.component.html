@@ -1,0 +1,17 @@
+<div class="panel">
+    <div class="header">
+        <div class="title">Angular 8 + TinyMCE 5 with lazy Loading</div>
+        <div class="title">'Fill The Gaps' Slide Editor</div>
+    </div>
+    <div class="body">
+        <div><a routerLink="/article">Article Editor</a> &bull; <a routerLink="/fill-the-gaps">'Fill The Gaps' slide editor</a></div>
+
+        <div class="form" [formGroup]="form">
+            <div class="text-content slide slide-fill-the-gaps">
+                <editor class="rich-editor" [init]="editorConfig" formControlName="text"></editor>
+            </div>
+        </div>
+
+        <textarea readonly style="width: 100%; white-space: pre-line; height: 350px; font-size: 16px;">{{ form.value | json }}</textarea>
+    </div>
+</div>

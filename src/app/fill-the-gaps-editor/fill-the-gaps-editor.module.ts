@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditorModule as TinymceModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
 
-import { EditorComponent } from './editor.component';
+import { FillTheGapsEditorComponent } from './fill-the-gaps-editor.component';
 
 /**
  * Этот роут срабатывает после ленивой загрузки модуля по роуту /editor
@@ -15,7 +15,7 @@ const routes: Routes = [
   {
     // страница для присоединения к классу и открытию конференции
     path: '',
-    component: EditorComponent,
+    component: FillTheGapsEditorComponent,
   },
 ];
 
@@ -29,10 +29,10 @@ const routes: Routes = [
     ReactiveFormsModule,
   ],
   declarations: [
-    EditorComponent,
+    FillTheGapsEditorComponent,
   ],
   providers: [
     { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' }
   ],
 })
-export class EditorModule { }
+export class FillTheGapsEditorModule { }

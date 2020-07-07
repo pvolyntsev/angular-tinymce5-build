@@ -5,12 +5,17 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/editor',
+    redirectTo: '/article',
   },
   {
-    /** @see EditorModule */
-    path: 'editor',
-    loadChildren: './editor/editor.module#EditorModule',
+    /** @see ArticleEditorModule */
+    path: 'article',
+    loadChildren: './article-editor/article-editor.module#ArticleEditorModule',
+  },
+  {
+    /** @see FillTheGapsEditorModule */
+    path: 'fill-the-gaps',
+    loadChildren: './fill-the-gaps-editor/fill-the-gaps-editor.module#FillTheGapsEditorModule',
   },
 ];
 

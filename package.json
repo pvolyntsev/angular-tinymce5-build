@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "repository": "https://github.com/pvolyntsev/angular-tinymce5-build",
   "scripts": {
-    "start": "ng build --watch",
-    "serve": "ng serve",
+    "start": "ng serve --port=4200",
     "build": "ng build"
   },
   "devDependencies": {},

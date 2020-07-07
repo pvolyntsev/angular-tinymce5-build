@@ -1,8 +1,11 @@
 <div class="panel">
     <div class="header">
         <div class="title">Angular 8 + TinyMCE 5 with lazy Loading</div>
+        <div class="title">Article Editor</div>
     </div>
     <div class="body">
+        <div><a routerLink="/article">Article Editor</a> &bull; <a routerLink="/fill-the-gaps">'Fill The Gaps' Slide Editor</a></div>
+
         <div class="form" [formGroup]="form">
             <div class="text-content">
                 <editor class="rich-editor" [init]="editorConfig" formControlName="text"></editor>

@@ -11,6 +11,7 @@
 h1, h2, h3, h4, h5, h6, strong, b, .bold, .strong {
   font-family: $font-family-bold;
   font-weight: 700;
+  line-height: 130%;
 }
 
 .rich-html, .rich-editor {
@@ -20,4 +21,12 @@ h1, h2, h3, h4, h5, h6, strong, b, .bold, .strong {
 
   @import "article";
   @import "plugins";
+}
+
+.slide.slide-fill-the-gaps {
+  .rich-html, .rich-editor {
+    * {
+      line-height: 160%;
+    }
+  }
 }

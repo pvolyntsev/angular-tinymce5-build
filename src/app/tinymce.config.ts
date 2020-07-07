@@ -1,5 +1,5 @@
 const baseTinyMCEConfig = {
-  skin: 'lingua',
+  skin: 'onclass',
   menubar: false,
   toolbar: false,
   inline: true,
@@ -15,7 +15,7 @@ const baseTinyMCEConfig = {
     tiny_mce_wiris : '/mathtype/plugin.min.js',
   },
   extended_valid_elements : 'marker[*],figure[*],columns[*],column[*]',
-  quickbars_insert_toolbar: 'quicktable hr columns blockquote-colors additional',
+  quickbars_insert_toolbar: 'quicktable hr columns bullist numlist blockquote-colors additional',
   quickbars_selection_toolbar:
     'undo redo' +
     ' | formatselect' +
@@ -23,7 +23,7 @@ const baseTinyMCEConfig = {
     ' | blockquote-colors marker-colors span-colors' +
     ' | align bullist numlist | additional'
   ,
-  contextmenu: 'undo redo | inserttable cell row column deletetable | tiny_mce_wiris_formulaEditor | bullist numlist',
+  contextmenu: 'undo redo | inserttable cell row column deletetable | bullist numlist',
   powerpaste_word_import: 'clean',
   powerpaste_html_import: 'clean',
   toolbar_groups: { // ?
@@ -33,41 +33,41 @@ const baseTinyMCEConfig = {
       items: 'alignleft aligncenter alignright alignjustify'
     }
   },
-  forced_root_block: 0,
-  color_cols: 1,
+  forced_root_block: 'p',
   custom_colors: false,
-  color_map: [
-    "1E252B", "Black",
-    "6D7381", "Gray",
-    "FFFFFF", "White",
-    "5AB3E4", "Blue",
-    "E86F79", "Red",
-    "87D37C", "Green",
-    "FFDD00", "Yellow"
-  ],
+  color_cols: 1,
+  // color_map: [
+  //   '1E252B', 'Black',
+  //   '6D7381', 'Gray',
+  //   'FFFFFF', 'White',
+  //   '5AB3E4', 'Blue',
+  //   'E86F79', 'Red',
+  //   '87D37C', 'Green',
+  //   'FFDD00', 'Yellow'
+  // ],
   color_blockquote_map: {
-    "rgba(0,0,0,0.6)": "Black",
-    "#6D7381": "Gray",
-    "#5AB3E4": "Blue",
-    "#E86F79": "Red",
-    "#87D37C": "Green",
-    "#FFDD00": "Yellow"
+    '#F9CDCD': 'Pink',
+    '#FCEFCA': 'Yellow',
+    '#C0E2F5': 'Blue',
+    '#D4F1E0': 'Green',
+    '#E1CBF6': 'Purple',
+    '#FCE1C9': 'Orange',
   },
   color_marker_map: {
-    "rgba(0,0,0,0.6)": "Black",
-    "#6D7381": "Gray",
-    "#5AB3E4": "Blue",
-    "#E86F79": "Red",
-    "#87D37C": "Green",
-    "#FFDD00": "Yellow"
+    'rgba(0,0,0,0.6)': 'Black',
+    '#6D7381': 'Gray',
+    '#5AB3E4': 'Blue',
+    '#E86F79': 'Red',
+    '#87D37C': 'Green',
+    '#FFDD00': 'Yellow'
   },
   color_span_map: {
-    "rgba(0,0,0,0.6)": "Black",
-    "#6D7381": "Gray",
-    "#5AB3E4": "Blue",
-    "#E86F79": "Red",
-    "#87D37C": "Green",
-    "#FFDD00": "Yellow"
+    'rgba(0,0,0,0.6)': 'Black',
+    '#6D7381': 'Gray',
+    '#5AB3E4': 'Blue',
+    '#E86F79': 'Red',
+    '#87D37C': 'Green',
+    '#FFDD00': 'Yellow'
   },
   image_caption: true,
   setup: function (editor) {
@@ -88,19 +88,17 @@ export const TinyMCEGapsConfig = {
   extended_valid_elements: baseTinyMCEConfig.extended_valid_elements + ',gap-inputbox,gap-dropbox,gap-selectbox[*],gap-variant[*]',
   plugins: [
     ...baseTinyMCEConfig.plugins,
-    'gap-selectlist',
-    'gap-dropbox',
+    'gap-selectbox',
     'gap-inputbox',
+    'gap-dropbox',
   ],
   quickbars_selection_toolbar:
     'undo redo' +
     ' | formatselect' +
-    ' | gap-selectlist gap-inputbox gap-dropbox' +
+    ' | gap-selectbox gap-inputbox gap-dropbox' +
     ' | bold italic underline strikethrough' +
-    ' | backcolor forecolor' +
-    ' | tiny_mce_wiris_formulaEditor' +
-    ' | align' +
-    ' | bullist numlist'
+    ' | blockquote-colors marker-colors span-colors' +
+    ' | align bullist numlist'
   ,
-  contextmenu: 'undo redo | gap-selectlist gap-inputbox gap-dropbox | inserttable cell row column deletetable | bullist numlist',
+  contextmenu: 'undo redo | gap-selectbox gap-inputbox gap-dropbox | inserttable cell row column deletetable | bullist numlist',
 };
