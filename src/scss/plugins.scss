@@ -1,4 +1,4 @@
-/* selectlist plugin */
+/* gap-inputbox/dropbox/selectbox plugin */
 
 gap-inputbox {
     box-sizing: border-box;
@@ -57,7 +57,6 @@ gap-selectbox + gap-dropbox {
 gap-inputbox:first-child,
 gap-dropbox:first-child,
 gap-selectbox:first-child {
-    //box-shadow: 0 0 5px red;
     margin-left: 0;
 }
 
@@ -100,26 +99,35 @@ table tr:first-child td:last-child {
 }
 
 /** columns plugin */
-columns {
+section.columns {
     display: flex;
     flex-direction: row;
     align-content: flex-start;
-}
-column {
-    flex: 1
-}
-column + column {
-    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    > div.column {
+        flex: 1
+    }
+    div.column + div.column {
+        margin-left: 20px;
+    }
 }
 
 /** image plugin */
 figure.image {
+    max-width: 730px;
+
+    img {
+        width: 100%;
+        height: auto !important;
+    }
+
     figcaption {
         padding-top: 10px !important;
         font-size: 14px !important;
         line-height: 130%;
         color: #A4B0C3 !important;
-        //margin-bottom: 30px; // проверить по макету !!!
         text-align: center;
     }
 }
@@ -129,22 +137,12 @@ figure.align-left {
     width: 50% !important;
     height: 100% !important;
     margin: 10px 30px 10px 0;
-
-    > img {
-        width: 100%;
-        height: auto !important;
-    }
 }
 
 figure.align-center {
     display: block;
     width: 100%;
     margin: 10px 0;
-
-    > img {
-        width: 100%;
-        height: auto !important;
-    }
 }
 
 figure.align-right {
@@ -152,23 +150,19 @@ figure.align-right {
     width: 50% !important;
     height: 100% !important;
     margin: 10px 0 10px 30px;
-    
-    > img {
-        width: 100%;
-        height: auto !important;
-    }
 }
 
 img.align-left {
     float: left;
     width: 50% !important;
+    height: 100% !important;
     margin: 10px 30px 10px 0;
-    height: 100% !important
 }
 
 img.align-right {
     float: right;
-    width: 50%;
+    width: 50% !important;
+    height: 100% !important;
     margin: 10px 0 10px 30px;
 }
 
@@ -179,10 +173,10 @@ img.align-center {
     margin: 10px 0;
 }
 
-/** ??? */
-#aria-owns_2303449411561588783963756 .tox-swatches__row {
-    display: none;
-}
+///** ??? */
+//#aria-owns_2303449411561588783963756 .tox-swatches__row {
+//  display: none;
+//}
 
 /** blockquote-colors plugin */
 blockquote[class^="blockquote-"] {
@@ -226,3 +220,31 @@ span[class^="pen-"] { display: inline; }
 .pen-red           { color: #E86F79; }
 .pen-green         { color: #87D37C; }
 .pen-yellow        { color: #FFDD00; }
+
+
+/* только в режиме редактирования */
+.mce-content-body {
+
+    /** columns plugin */
+    section.columns {
+        > div.column {
+            &:before {
+                content: '';
+                display: block;
+                height: 4px;
+                border-top: 1px dashed #999;
+                border-left: 1px dashed #999;
+                border-right: 1px dashed #999;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                height: 4px;
+                border-bottom: 1px dashed #999;
+                border-left: 1px dashed #999;
+                border-right: 1px dashed #999;
+            }
+        }
+    }
+}
