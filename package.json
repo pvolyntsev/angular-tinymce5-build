@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@angular-devkit/build-angular": "~0.803.23",
+    "@angular-devkit/build-angular": "~15.0.4",
     "@angular-devkit/build-ng-packagr": "^0.803.23",
     "@angular/animations": "^8.2.14",
     "@angular/cdk": "^8.2.3",
